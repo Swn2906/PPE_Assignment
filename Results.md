@@ -3,6 +3,7 @@
 NOTE: 
 MVR : Missed-Violation Rate
 FAR : False-Alarm Rate
+
 **Natural test set (primary evidence)**
 
 | Threshold | Arm1 MVR | Arm1 FAR | Arm2 MVR | Arm2 FAR |
