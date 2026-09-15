@@ -1,0 +1,15 @@
+# Confirmed exact version used for the reported runs
+rfdetr[train,loggers]==1.10.1
+
+# Used, but exact versions not pinned/confirmed -- installed via Colab's
+# default environment (Python 3.13) plus these pip installs:
+transformers
+roboflow
+opencv-python
+torch
+torchvision
+matplotlib
+pandas
+numpy
+Pillow
+tqdm
