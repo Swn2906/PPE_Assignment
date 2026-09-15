@@ -51,7 +51,7 @@ Loosening stage-1 trades recall for precision — it doesn't fix the architectur
 
 **TTA (side experiment, Arm1)**
 
-| Threshold | Natural: no-TTA / TTA MVR | Degraded: no-TTA / TTAMVR | Natural: no TTA/TTAFAR |
+| Threshold | Natural: no-TTA / TTA MVR | Degraded: no-TTA / TTA MVR | Natural: no TTA/TTA FAR |
 | :---: | :---: | :---: | :---: |
 | 0.3 | 2.5% / 5.0% | 63.1% / 87.5%  | 8.8%/8.4% |
 | 0.5 | 4.7% / 7.4%  | 74.2% / 95.5% | 5.3%/ 3.6% |
