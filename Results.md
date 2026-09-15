@@ -56,7 +56,7 @@ Loosening stage-1 trades recall for precision — it doesn't fix the architectur
 | 0.3 | 2.5% / 5.0% | 63.1% / 87.5%  | 8.8%/8.4% |
 | 0.5 | 4.7% / 7.4%  | 74.2% / 95.5% | 5.3%/ 3.6% |
 
-TTA showed a small trade-off on the natural test set, but caused a significant drop in recall for small objects. The likely reason is inaccurate box fusion at very small box sizes, so TTA was not adopted.
+TTA showed a small trade-off on the natural test set, but caused a significant drop in recall for small objects. The likely reason is inaccurate box fusion at very small box sizes, so TTA was not adopted. TTA also adds significant inference cost: it requires three forward passes per image, with the 2× upscaled view processing 4× more pixels. We did not benchmark the latency, but this overhead is a concern for 12-stream deployment
 
 **Where Each Arm Fails?**
 
