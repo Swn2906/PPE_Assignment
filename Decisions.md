@@ -42,7 +42,7 @@ Goal: Approximate the deployment setting, since \<0.3% of the natural test set c
 
 What we did: Created a synthetic slice by shrinking the full image and its bounding boxes together to test performance under reduced visual detail. We use this as a supplementary, directional signal, while the natural test set remains the primary evaluation.
 
-Would change our mind if: We had genuine distant-camera footage. Real deployment data would be preferable to further synthetic approximation. We also considered scale augmentation during training but did not have time to complete it.
+Would change our mind if: We had genuine distant-camera footage. Real deployment data would be preferable to further synthetic approximation. 
 
 **7\.  Default Augmentation**
 
