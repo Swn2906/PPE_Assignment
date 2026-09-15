@@ -9,10 +9,10 @@ crop classifier (stage 2).
 
 | File | Contents |
 |---|---|
-| `LABEL_POLICY.md` | Data audit findings, annotation spec, hard cases |
-| `EVAL_PLAN.md` | Evaluation protocol, falsification criterion |
-| `DECISIONS.md` | 9 key decisions, alternatives considered, two-more-weeks fixes |
-| `RESULTS.md` | The comparison, error analysis, recommendation |
+| `Label_Policy.md` | Data audit findings, annotation spec, hard cases |
+| `Eval_Plan.md` | Evaluation protocol, falsification criterion |
+| `Decisions.md` | 9 key decisions, alternatives considered, two-more-weeks fixes |
+| `Results.md` | The comparison, error analysis, recommendation |
 | `figures/` | Charts referenced in RESULTS.md |
 
 **Recommendation: Arm 1.** See RESULTS.md for the full comparison — Arm 2
