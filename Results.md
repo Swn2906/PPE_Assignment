@@ -1,3 +1,5 @@
+Arm 2 tests whether separating localization and classification can recover the recall lost by Arm 1 under scale/detail degradation. The results do not support this hypothesis -- See the comparison below.
+
 **Operating Point:**   
 **Confidence=0.5, IoU=0.5** (fixed matching threshold; see DECISIONS.md \#5). Chosen as the balance point before recall (0.3) trades too much false-alarm, or precision (0.7-0.9) trades too much recall — see full sweep below.  
 NOTE: 
@@ -64,6 +66,20 @@ TTA showed a small trade-off on the natural test set, but caused a significant d
 
 **My Recommendation:**  
 **Arm 1**. Arm 2 adds latency and another failure point without showing a measurable benefit on either test condition across the configurations tested. Neither arm is deployment-ready for the target scale/detail regime, indicating a broader data or architectural gap that the cascade does not resolve.
+
+**Deployment Note**
+
+**Ship Arm 1.** Arm 2 adds latency that increases with the number of detected people and introduces another failure point, without showing a measurable accuracy benefit in our tests.
+
+RF-DETR Small has a published latency of ~3.5 ms/frame on an NVIDIA T4 with TensorRT FP16 and batch size 1. This suggests there may be sufficient compute headroom for 12 streams, but **we did not benchmark our own checkpoint or target hardware**, so this cannot be treated as a production latency guarantee.
+
+Before deployment, we would validate:
+
+1. Real distant-camera footage instead of the synthetic proxy.
+2. A **"needs review"** fallback for missed person detections.
+3. Actual TensorRT latency on the target hardware.
+4. The `head`/`helmet` imbalance, since `head` is the safety-critical and weaker class.
+
 
 **Where the Tool Got It Wrong, and How We Caught It**  
 Our first synthetic test was intended to simulate small objects, but shrinking the image and boxes together preserved their relative scale. We caught this by comparing the box-height distributions before and after transformation—the histograms overlapped instead of shifting.
