@@ -1,5 +1,8 @@
 **Operating Point:**   
 **Confidence=0.5, IoU=0.5** (fixed matching threshold; see DECISIONS.md \#5). Chosen as the balance point before recall (0.3) trades too much false-alarm, or precision (0.7-0.9) trades too much recall — see full sweep below.  
+NOTE: 
+MVR : Missed-Violation Rate
+FAR : False-Alarm Rate
 **Natural test set (primary evidence)**
 
 | Threshold | Arm1 MVR | Arm1 FAR | Arm2 MVR | Arm2 FAR |
