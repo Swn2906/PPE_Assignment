@@ -107,3 +107,5 @@ Trained checkpoints (`.pth`/`.pt` files) are excluded from this repo —
 reproducible via the training scripts above, not committed as large
 binaries. `Codes/Audit_Data_prep/audit_utils.py` holds shared utilities
 used throughout data auditing and visualization.
+
+Note: Run all steps from the local Colab disk (e.g. /content/...), not Google Drive. prepare_arm2_stage1_data.py uses os.symlink, which is not supported on Drive's mounted filesystem, and file operations are also significantly slower there.
