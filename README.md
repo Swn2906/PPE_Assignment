@@ -21,10 +21,10 @@ was meant to test for, at any configuration tried.
 
 ## Repo structure
 ```
-LABEL_POLICY.md
-EVAL_PLAN.md
-DECISIONS.md
-RESULTS.md
+Label_Policy.md
+Eval_Plan.md
+Decisions.md
+Results.md
 figures/
   scale_bucket_comparison.png
   threshold_comparison.png
@@ -76,7 +76,7 @@ python Codes/Training/train_crop_classifier.py --features_dir crop_features --ou
 
 **5. Build the resolution-degraded test slice** (see note in the script —
 this tests reduced visual detail, not relative object-to-frame scale;
-see EVAL_PLAN.md)
+see Eval_Plan.md)
 ```bash
 python Codes/Synthetic_data/build_synthetic_small_scale.py --src Hard-Hat-Workers-10-2class/test \
     --dst Hard-Hat-Workers-10-2class/test_resolution_degraded --target_rel_h 0.021
@@ -91,7 +91,7 @@ python Codes/Evaluation/evaluate_arm2_pipeline.py --stage1_checkpoint arm2_stage
 ```
 Repeat both against `test_resolution_degraded` for the supplementary
 slice. `Codes/Evaluation/evaluate_arm1_tta.py` runs the TTA side
-experiment (DECISIONS.md #6).
+experiment (Decisions.md #8).
 
 **7. Figures and qualitative comparison**
 ```bash
